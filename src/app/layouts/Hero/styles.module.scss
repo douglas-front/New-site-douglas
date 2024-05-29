@@ -1,0 +1,58 @@
+@import "helpers";
+.hero{
+    overflow: hidden;
+    height: 100vh;
+    background-color: $white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    h1{
+
+        overflow: hidden;
+        font-size: 11.4375vw;
+        font-weight: 400;
+        color: $blue;
+        opacity: 0;
+
+        width: 100%;
+        height: 200px;
+
+
+        position: relative;
+        text-align: center;
+    }
+    h3{
+        font-weight: 400;
+        font-size: 1.9vw;
+        color: $blue;
+
+        margin-bottom: 5vw;
+        opacity: 0;
+        transform: translateY(10vw);
+    }
+
+    div{
+        position: absolute;
+        bottom: 2vw;
+    }
+    .scroll{
+    
+        bottom: -3vw;
+        display: flex;
+        align-items: center;
+
+        small{
+            font-size: 1.08vw;
+            color: $blue;
+        }
+        img{
+            width: 2.91vw;
+            height: 6vh;
+        }
+    }
+}

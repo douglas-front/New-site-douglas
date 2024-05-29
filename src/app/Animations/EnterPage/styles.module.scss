@@ -1,0 +1,28 @@
+@import "helpers";
+
+.enter{
+    background-color: $black;
+
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 99;
+    
+    h1{
+        font-size: 5.667vw;
+        color: $cream;
+        font-weight: 300;
+        // transition: all .5s;
+      
+        display: none;
+
+        transform: translateY(0.5vw);
+    }
+}
