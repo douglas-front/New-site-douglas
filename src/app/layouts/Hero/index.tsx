@@ -16,7 +16,7 @@ export default function Hero() {
       <h3 className="full">FULL STACK DEVELOPER</h3>
 
       <div className={`${styles.scroll} scroll`}>
-        <small>scroll</small>
+        <h2>Scroll</h2>
         <img src="/img/mouse.png" alt="" />
       </div>
     </section>

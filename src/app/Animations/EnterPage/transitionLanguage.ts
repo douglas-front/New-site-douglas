@@ -38,6 +38,12 @@ function hello() {
     display: "block",
     delay: 1.2,
   });
+
+  gsap.to(".hello", {
+    y: 0,
+    opacity: 0,
+    delay: 2,
+  });
 }
 
 function container() {

@@ -19,7 +19,7 @@
         color: $blue;
     }
 
-    div{
+    .arrow{
         cursor: pointer;
         background-color: $blue;
         width: 3.12vw;
@@ -29,8 +29,59 @@
         display: grid;
         place-items: center;
 
-        img{
-            width: 0.7vw;
+        border: none;
+
+        transition: all 2s;
+      
+    }
+}
+.menu{
+    position: fixed;
+    top: 0;
+    right: -40vw;
+    z-index: -1;
+    // background-color: $blue;
+
+    menu{
+       position: absolute;
+       top: 13vw;
+       left: 13vw;
+
+       list-style: none;
+
+       display: flex;
+       flex-direction: column;
+       gap: 2.7vw;
+
+
+       li{
+        cursor: pointer;
+        font-size: 3vw;
+        color: $white;
+        font-weight: 400;
+
+        position: relative;
+       
+
+        &::before{
+            content: "";
+
+            position: absolute;
+            top: 1.3vw;
+            left: -1.8vw;
+            height: 1.2vw;
+            width: 1.2vw;
+            transform: scale(0);
+
+            background-color: $white;
+            border-radius: 50%;
+
+            transition: all .2s;
         }
+
+        &:hover::before{
+            transform: scale(1);
+        }
+       }
     }
 }

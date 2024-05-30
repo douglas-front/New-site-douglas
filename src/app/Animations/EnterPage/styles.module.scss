@@ -1,7 +1,7 @@
 @import "helpers";
 
 .enter{
-    background-color: $black;
+    background-color: $white;
 
     display: grid;
     place-items: center;
@@ -17,7 +17,7 @@
     
     h1{
         font-size: 5.667vw;
-        color: $cream;
+        color: $blue;
         font-weight: 300;
         // transition: all .5s;
       
