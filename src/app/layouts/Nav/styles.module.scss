@@ -1,0 +1,36 @@
+@import "helpers";
+
+.nav{
+    position: fixed;
+    top: 3vw;
+    width: 100vw;
+
+    padding-inline: $padding;
+
+    z-index: 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1{
+        font-size: 1.36vw;
+        font-weight: 400;
+        color: $blue;
+    }
+
+    div{
+        cursor: pointer;
+        background-color: $blue;
+        width: 3.12vw;
+        height: 3.12vw;
+        border-radius: 100%;
+
+        display: grid;
+        place-items: center;
+
+        img{
+            width: 0.7vw;
+        }
+    }
+}

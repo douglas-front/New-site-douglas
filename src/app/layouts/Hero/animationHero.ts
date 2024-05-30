@@ -15,17 +15,17 @@ export function Animation(){
 
         //this char "douglas" 
         timeLine.set(".char", {
-          y: "110%",
+          y: "17vw",
           opacity: 1,
             position: "relative"
         })
 
         timeLine.to(".char", {
-            y: "0%",
+            y: 0,
             stagger: 0.04,
             duration: 0.9,
             ease: "elastic.out(1,1)",
-            delay: 2.3
+            delay: 2.2
         })
 
         //this h1 class
@@ -33,10 +33,10 @@ export function Animation(){
             opacity: 1,
             delay: 1
         })
-
+        
         gsap.to(".full",{
             delay: 2.5,
-            y: 0,
+            y: "1vw",
             opacity: 1,
             ease: "elastic.out(1,1)",
         })
