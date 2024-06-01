@@ -2,12 +2,14 @@
 import { MdArrowOutward } from "react-icons/md";
 import styles from "./styles.module.scss";
 import { useState } from "react";
-import { openNav, closeNav } from "./Animations/NavAnimations";
+import { openNav, closeNav } from "./Animations/animationNav";
 
 export default function Button() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleButtonClick = () => {
+
+  //function for verificate isOpen
+  function handleButtonClick() {
     isOpen ? closeNav(setIsOpen) : openNav(setIsOpen);
   };
 

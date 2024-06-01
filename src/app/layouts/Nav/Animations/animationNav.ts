@@ -1,11 +1,12 @@
 import gsap from "gsap";
-import { Dispatch, SetStateAction } from "react";
-
 
 export function openNav(setIsOpen : any) {
 
+  //isOpen in Button.tsx is seted to false
   setIsOpen(true);
 
+
+  //animation of li in the menu
   gsap.to(".li1", {
     y: 0,
     delay: 0.3,
@@ -25,6 +26,8 @@ export function openNav(setIsOpen : any) {
     ease: "elastic.out(1,5)",
   });
 
+
+  //animation overlay
   gsap.to(".styles_overlay__PDkD5", {
     bottom: 0,
     height: "200vh",
@@ -34,7 +37,11 @@ export function openNav(setIsOpen : any) {
 }
 
 export function closeNav(setIsOpen: any) {
+
+  //isOpen in Button.tsx is seted to true
   setIsOpen(false);
+
+  //animation of li in the menu
   gsap.to(".li1", {
     y: "35vw",
     delay: 0.1,
@@ -54,6 +61,7 @@ export function closeNav(setIsOpen: any) {
     ease: "elastic.out(1,5)",
   });
 
+  //animation overlay
   gsap.to(".styles_overlay__PDkD5", {
     bottom: "-100%",
     height: "0vh",

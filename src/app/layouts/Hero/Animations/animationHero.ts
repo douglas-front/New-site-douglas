@@ -3,7 +3,7 @@ import SplitType from "split-type";
 
 export function Animation() {
   //started new split text
-  new SplitType(".textAnimation", {
+  new SplitType(".h1Hero", {
     types: "chars",
   });
 
@@ -11,7 +11,7 @@ export function Animation() {
   let ctx = gsap.context(() => {
     const timeLine = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    //this char "douglas"
+    //this char "d o u g l a s"
     timeLine.set(".char", {
       y: "17vw",
       opacity: 1,
@@ -26,12 +26,13 @@ export function Animation() {
       delay: 2.2,
     });
 
-    //this h1 class
-    gsap.to(".textAnimation", {
+    //this h1Hero class
+    gsap.to(".h1Hero", {
       opacity: 1,
       delay: 1,
     });
 
+    //animation for the text "full stack"
     gsap.to(".full", {
       delay: 2.5,
       y: "1vw",
