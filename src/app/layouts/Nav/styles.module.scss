@@ -1,87 +1,84 @@
 @import "helpers";
 
-.nav{
-    position: fixed;
-    top: 3vw;
-    width: 100vw;
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9;
 
-    padding-inline: $padding;
+  display: flex;
+  justify-content: space-between;
+  // background-color: red;
 
-    z-index: 9;
+  padding-inline: $padding;
+  padding-top: 4.27vw;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    h1{
-        font-size: 1.36vw;
-        font-weight: 400;
-        color: $blue;
-    }
-
-    .arrow{
-        cursor: pointer;
-        background-color: $blue;
-        width: 3.12vw;
-        height: 3.12vw;
-        border-radius: 100%;
-
-        display: grid;
-        place-items: center;
-
-        border: none;
-
-        transition: all 2s;
-      
-    }
+  h1 {
+    font-weight: 400;
+    font-size: 1.6vw;
+    color: $blue;
+  }
 }
-.menu{
-    position: fixed;
-    top: 0;
-    right: -40vw;
-    z-index: -1;
-    // background-color: $blue;
+.button {
+  cursor: pointer;
 
-    menu{
-       position: absolute;
-       top: 13vw;
-       left: 13vw;
+  width: 3.1vw;
+  height: 3.1vw;
 
-       list-style: none;
+  border-radius: 100%;
+  border: none;
+  z-index: 9;
 
-       display: flex;
-       flex-direction: column;
-       gap: 2.7vw;
+  transition: all 0.3s;
+}
+.overlay {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 
+  width: 100vw;
+  height: 0vh;
+  border-radius: 50% 50% 0 0;
+  background-color: $blue;
 
-       li{
-        cursor: pointer;
-        font-size: 3vw;
-        color: $white;
-        font-weight: 400;
+  z-index: 8;
 
-        position: relative;
-       
+  menu {
+    position: absolute;
+    top: 110vh;
+    left: 23vw;
+    list-style: none;
 
-        &::before{
-            content: "";
+    li {
+      cursor: pointer;
+      font-size: 10vw;
+      color: $white;
+      font-weight: 300;
 
-            position: absolute;
-            top: 1.3vw;
-            left: -1.8vw;
-            height: 1.2vw;
-            width: 1.2vw;
-            transform: scale(0);
+      position: relative;
 
-            background-color: $white;
-            border-radius: 50%;
+      text-transform: uppercase;
 
-            transition: all .2s;
-        }
+      transform: translateY(23vw);
 
-        &:hover::before{
-            transform: scale(1);
-        }
-       }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5vw;
+        left: -5vw;
+        width: 3vw;
+        height: 3vw;
+        border-radius: 100%;
+        background-color: $white;
+
+        transform: scale(0);
+
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover::before {
+        transform: scale(1);
+      }
     }
+  }
 }

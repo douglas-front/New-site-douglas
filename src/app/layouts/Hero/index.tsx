@@ -1,10 +1,9 @@
 "use client";
 import { useEffect } from "react";
 import styles from "./styles.module.scss";
-import { Animation } from "@/app/layouts/Hero/animationHero";
+import { Animation } from "./Animations/animationHero";
 
 export default function Hero() {
-    
   useEffect(() => {
     //animation for h1 "douglas" , split type used
     Animation();

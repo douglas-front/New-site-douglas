@@ -1,12 +1,12 @@
-import Arrow from "./Arrow";
-import Menu from "./Menu";
+import Button from "./Button";
+import Menu from "./Overlay";
 import styles from "./styles.module.scss";
 
 export default function Nav() {
   return (
     <nav className={styles.nav}>
       <h1>Douglas</h1>
-      <Arrow />
+      <Button />
       <Menu />
     </nav>
   );

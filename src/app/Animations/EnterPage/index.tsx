@@ -5,13 +5,11 @@ import gsap from "gsap";
 import rendering from "@/app/Animations/EnterPage/transitionLanguage";
 
 export default function EnterPage() {
-  
   //array content class of h1's
   const arrayOfClass = [".hello", ".ola", ".bonJour", ".styles_enter__aKZGu"];
 
   //animation for other language
   useEffect(() => {
-
     rendering();
 
     return () => {
@@ -19,7 +17,6 @@ export default function EnterPage() {
         gsap.killTweensOf(item);
       });
     };
-
   }, []);
 
   return (

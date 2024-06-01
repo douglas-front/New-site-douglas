@@ -1,28 +1,28 @@
 @import "helpers";
 
-.enter{
-    background-color: $white;
+.enter {
+  background-color: $white;
 
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    
-    position: fixed;
-    top: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 
-    width: 100vw;
-    height: 100vh;
+  position: fixed;
+  top: 0;
 
-    z-index: 99;
-    
-    h1{
-        font-size: 5.667vw;
-        color: $blue;
-        font-weight: 300;
-        // transition: all .5s;
-      
-        display: none;
+  width: 100vw;
+  height: 100vh;
 
-        transform: translateY(0.5vw);
-    }
+  z-index: 99;
+
+  h1 {
+    font-size: 5.667vw;
+    color: $blue;
+    font-weight: 300;
+    // transition: all .5s;
+
+    display: none;
+
+    transform: translateY(0.5vw);
+  }
 }
