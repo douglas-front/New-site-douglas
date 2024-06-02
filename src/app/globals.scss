@@ -4,13 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // pointer-events: none;
-  overflow: hidden;
+  overflow-x: hidden;
+
 }
 body{
   background-color: $black;
-  overflow-x: hidden;
-  overflow-y: initial;
 }
 h1{
   font-family: var(--font-JetBrains)
