@@ -1,5 +1,6 @@
 import EnterPage from "@/app/Animations/EnterPage";
 import Nav from "@/app/layouts/Nav";
+import Hero from "./layouts/Hero";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <EnterPage />
       <main>
         <Nav />
+        <Hero/>
       </main>
     </>
   );

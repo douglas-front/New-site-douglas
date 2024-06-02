@@ -1,0 +1,98 @@
+@import "helpers";
+
+.hero {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  padding-inline: $padding;
+  position: relative;
+  z-index: -1;
+
+  h1 {
+    overflow: hidden;
+    color: $white;
+    font-size: 27vw;
+    font-weight: 800;
+    position: absolute;
+    top: 2vw;
+    left: -7vw;
+    height: 30vw;
+    pointer-events: none;
+    // background-color: red;
+
+    span {
+      display: block;
+      transform: translateY(22vw);
+    }
+  }
+  p {
+    overflow: hidden;
+    color: $white;
+    width: 22vw;
+    font-size: 1.66vw;
+    pointer-events: none;
+    padding-top: 35vw;
+
+    span {
+      display: block;
+      transform: translateY(22vw);
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  right: 4.11vw;
+  bottom: 2vw;
+  transform: scale(0);
+}
+
+@media screen and (min-width: 250px) and (max-width: 550px) {
+  .hero {
+    h1 {
+      font-size: 27vw;
+      top: 40vw;
+    }
+    p {
+      width: 99vw;
+      font-size: 9.66vw;
+      padding-top: 80vw;
+      font-weight: 500;
+    }
+  }
+  .circle {
+    position: absolute;
+    left: 35vw;
+    bottom: 17vw;
+    transform: scale(0);
+  }
+}
+@media screen and (max-width: 370px) {
+  .circle {
+    position: absolute;
+    left: 35vw;
+    bottom: 35vw;
+    transform: scale(0);
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  .hero {
+    h1 {
+      font-size: 27vw;
+      top: 20vw;
+    }
+    p {
+      width: 85vw;
+      font-size: 7.66vw;
+      padding-top: 55vw;
+      font-weight: 500;
+    }
+  }
+  .circle {
+    position: absolute;
+    left: 39vw;
+    bottom: 5%;
+    // transform: translate(-50%,-50%);
+    transform: scale(0);
+  }
+}
