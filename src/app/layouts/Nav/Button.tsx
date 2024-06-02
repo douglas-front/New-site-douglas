@@ -1,5 +1,4 @@
 "use client";
-import { MdArrowOutward } from "react-icons/md";
 import styles from "./styles.module.scss";
 import { useState } from "react";
 import { openNav, closeNav } from "./Animations/animationNav";
@@ -7,19 +6,20 @@ import { openNav, closeNav } from "./Animations/animationNav";
 export default function Button() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-
-  //function for verificate isOpen
-  function handleButtonClick() {
+  function handleOpen() {
     isOpen ? closeNav(setIsOpen) : openNav(setIsOpen);
-  };
+  }
 
   return (
-    <button
-      onClick={handleButtonClick}
-      className={styles.button}
-      style={{ background: isOpen ? "#F7F7F7" : "#00304A" }}
-    >
-      <MdArrowOutward style={{ color: isOpen ? "#00304A" : "#F7F7F7" }} />
+    <button className={styles.button} onClick={() => handleOpen()}>
+      <div
+        style={{ backgroundColor: isOpen ? "#0F0E0E" : "#FFFCF6" }}
+        className={styles.line1}
+      ></div>
+      <div
+        style={{ backgroundColor: isOpen ? "#0F0E0E" : "#FFFCF6" }}
+        className={styles.line2}
+      ></div>
     </button>
   );
 }

@@ -1,84 +1,180 @@
 @import "helpers";
 
-.nav {
+.nav{
   position: fixed;
-  top: 0;
+  top: 3vw;
   width: 100vw;
-  z-index: 9;
+  padding-inline: $padding;
 
   display: flex;
   justify-content: space-between;
+
   // background-color: red;
 
-  padding-inline: $padding;
-  padding-top: 4.27vw;
-
-  h1 {
-    font-weight: 400;
+  h1{
+    color: $white;
     font-size: 1.6vw;
-    color: $blue;
   }
 }
-.button {
+
+.button{
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3vw;
 
-  width: 3.1vw;
-  height: 3.1vw;
-
-  border-radius: 100%;
+  background-color: transparent;
   border: none;
-  z-index: 9;
 
-  transition: all 0.3s;
+  z-index: 99;
+  
+  .line2,
+  .line1{
+    width: 4vw;
+    height: 0.2vw;
+    background-color: $white;
+    transition: all .4s ease-in-out;
+  }
+
+  .line1.active{
+    transform: rotate(45deg) translateY(0.3vw);
+  }
+  .line2.active{
+    transform: rotate(-40deg) translateY(-0.4vw);
+  }
 }
-.overlay {
+.overlay{
   overflow: hidden;
   position: fixed;
-  bottom: 0;
-  left: 0;
-
-  width: 100vw;
   height: 0vh;
-  border-radius: 50% 50% 0 0;
-  background-color: $blue;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: $white;
 
-  z-index: 8;
+  display: flex;
+  align-items: center;
 
-  menu {
-    position: absolute;
-    top: 110vh;
-    left: 23vw;
+  menu{
     list-style: none;
+    padding-left: 3vw;
 
-    li {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+
+    li{
+      overflow: hidden;
+      // background-color: red;
       cursor: pointer;
-      font-size: 10vw;
-      color: $white;
-      font-weight: 300;
-
+      font-size: 7vw;
+      text-transform: uppercase;
       position: relative;
 
-      text-transform: uppercase;
-
-      transform: translateY(23vw);
-
-      &::before {
+      &::before{
         content: "";
         position: absolute;
-        top: 5vw;
-        left: -5vw;
-        width: 3vw;
-        height: 3vw;
-        border-radius: 100%;
-        background-color: $white;
-
-        transform: scale(0);
-
-        transition: all 0.2s ease-in-out;
+        top: 4vw;
+        left: 0;
+        width: 0%;
+        height: 0.5vw;
+        background-color: $black;
+        transition: all .3s ease-in-out;
       }
-      &:hover::before {
-        transform: scale(1);
+      &:hover::before{
+        width: 100%;
       }
+
+      span{
+        display: block;
+        transform: translateY(7vw);
+      }
+    }
+    
+  }
+}
+
+
+@media screen and (min-width: 750px) and (max-width: 900px) {
+  .nav{
+    top: 7vw;
+  
+    h1{
+      font-size: 4.6vw;
+    }
+  }
+
+  .button{
+    gap: 1vw;
+  
+    .line2,
+    .line1{
+      width: 11vw;
+      height: 0.5vw;
+    }
+  }
+
+  .overlay{
+  
+    menu{
+      padding-left: 5vw;
+      gap: 7vw;
+  
+      li{
+       
+        font-size: 12vw;
+        
+        &:hover::before{
+          width: 0%;
+        }
+  
+        span{
+          transform: translateY(12vw);
+        }
+      }
+      
+    }
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 749px) {
+  .nav{
+    top: 11vw;
+    padding-inline: 11vw;
+    h1{
+      font-size: 5.6vw;
+    }
+  }
+
+  .button{
+    gap: 1vw;
+  
+    .line2,
+    .line1{
+      width: 17vw;
+      height: 0.6vw;
+    }
+  }
+
+  .overlay{
+  
+    menu{
+      padding-left: 5vw;
+      gap: 7vw;
+  
+      li{
+       
+        font-size: 15vw;
+        
+        &:hover::before{
+          width: 0%;
+        }
+  
+        span{
+          transform: translateY(15vw);
+        }
+      }
+      
     }
   }
 }
