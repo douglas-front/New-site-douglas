@@ -10,6 +10,7 @@
 body{
   background-color: $black;
   overflow-x: hidden;
+  overflow-y: initial;
 }
 h1{
   font-family: var(--font-JetBrains)
