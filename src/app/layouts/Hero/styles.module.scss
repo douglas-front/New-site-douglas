@@ -49,6 +49,7 @@
 
 @media screen and (min-width: 250px) and (max-width: 550px) {
   .hero {
+    overflow: initial;
     height: 100vh;
     h1 {
       font-size: 27vw;
