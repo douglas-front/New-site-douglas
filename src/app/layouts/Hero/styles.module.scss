@@ -49,6 +49,7 @@
 
 @media screen and (min-width: 250px) and (max-width: 550px) {
   .hero {
+    height: 100vh;
     h1 {
       font-size: 27vw;
       top: 40vw;
@@ -56,23 +57,22 @@
     p {
       width: 99vw;
       font-size: 9.66vw;
-      padding-top: 80vw;
+      margin-top: 40vw;
       font-weight: 500;
     }
   }
   .circle {
     position: absolute;
-    left: 35vw;
-    bottom: 17vw;
+    left: 40vw;
+    bottom: 15vw;
     transform: scale(0);
   }
 }
 @media screen and (max-width: 370px) {
+ 
   .circle {
-    position: absolute;
-    left: 35vw;
+    left: 40vw;
     bottom: 35vw;
-    transform: scale(0);
   }
 }
 @media screen and (min-width: 551px) and (max-width: 900px) {
