@@ -44,7 +44,7 @@
   position: absolute;
   right: 4.11vw;
   bottom: 2vw;
-  transform: scale(0);
+  transform: scale(0) rotate(90deg);
 }
 
 @media screen and (min-width: 250px) and (max-width: 550px) {
@@ -71,8 +71,7 @@
   .circle {
     position: absolute;
     left: 40vw;
-    bottom: 0vh;
-    transform: scale(0);
+    bottom: 0vh; 
   }
 }
 @media screen and (max-width: 370px) {

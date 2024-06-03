@@ -22,6 +22,12 @@ function CircleAnimation() {
     ease: "elastic.out(1,8)",
     duration: 1.5,
   });
+  gsap.to(".arrow", {
+    rotate: 360,
+    delay: 4,
+    ease: "elastic.out(1,8)",
+    duration: 1.5,
+  });
 }
 
 function ParagraphAnimation() {

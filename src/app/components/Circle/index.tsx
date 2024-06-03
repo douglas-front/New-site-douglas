@@ -4,7 +4,7 @@ import { IoIosArrowRoundDown } from "react-icons/io";
 export default function Circle(){
   return(
     <div className={styles.circle}>
-      <IoIosArrowRoundDown />
+      <IoIosArrowRoundDown className="arrow"/>
     </div>
   )
 }
