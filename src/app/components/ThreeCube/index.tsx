@@ -2,24 +2,25 @@
 import { Canvas } from "@react-three/fiber";
 import Cube from "./Cube";
 import styles from "./styles.module.scss";
-import gsap from "gsap";
 import { useEffect } from "react";
 import { sphereAnimation } from "./animations/sphereAnimation";
+import * as THREE from 'three';
+import Lights from "./Lights";
+import { OrbitControls } from "@react-three/drei";
 
 export default function ThreeCube() {
   
+
   useEffect(()=>{
     sphereAnimation();
    })
-
   return (
     <div className={`${styles.three} three`}>
-
       <Canvas>
-        <directionalLight position={[3, 2, 2]} intensity={1}/>
-        <directionalLight color="purple" position={[0, 1, 5]} intensity={0.5}/>
-        <ambientLight intensity={0.3}/>
+        <Lights/>
         <Cube color="#FFFCF6" position={[0, 0, 0]}/>
+        {/* <OrbitControls/> */}
+        {/* <axesHelper args={[10]}/> */}
       </Canvas>
     </div>
   );

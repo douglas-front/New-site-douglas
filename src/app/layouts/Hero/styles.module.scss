@@ -1,0 +1,133 @@
+@import "helpers";
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: $padding;
+  position: relative;
+}
+.title {
+  mix-blend-mode: difference;
+  z-index: 99;
+  margin-top: 7.5vw;
+
+  h1 {
+    overflow: hidden;
+    mix-blend-mode: difference;
+    color: $white;
+    width: 50vw;
+    font-weight: 800;
+    font-size: 6.97vw;
+    margin-left: 7vw;
+
+    span {
+      display: block;
+      transform: translateY(30vw); //for animation
+    }
+  }
+}
+.paragraph {
+  z-index: 99;
+  margin-right: 32vw;
+  margin-top: 4vw;
+  p {
+    overflow: hidden;
+    color: $white;
+    width: 10vw;
+    font-size: 1vw;
+
+    span {
+      display: block;
+      transform: translateY(10vw); //for animation
+    }
+  }
+}
+.color {
+  z-index: 99;
+  margin-right: 33vw;
+  margin-top: 1vw;
+  display: flex;
+  gap: 3vw;
+
+  p {
+    overflow: hidden;
+    color: $white;
+
+    span {
+      display: block;
+      transform: translateY(50vw); //for animation
+    }
+  }
+}
+.circle {
+  position: absolute;
+  right: 5.11vw;
+  bottom: 2vw;
+}
+
+// .blur{
+//   z-index: -1;
+//   overflow: hidden;
+//   width: 70vw;
+//   height: 12vw;
+//   border-radius: 50vw 50vw 0 0;
+//   position: absolute;
+//   bottom: 0;
+
+//   background: url("../../../../public/blur.png") ;
+// }
+
+@media screen and (max-width: 400px) {
+  .title {
+    margin-top: 54.5vw;
+
+    h1 {
+      width: 90vw;
+      font-size: 13.97vw;
+      margin-left: 0vw;
+
+      span {
+        transform: translateY(50vw); // for animation
+      }
+    }
+  }
+  .color {
+    margin-right: 38vw;
+    margin-top: 5vw;
+    gap: 10vw;
+    mix-blend-mode: difference;
+  }
+
+  .paragraph {
+    margin-right: 30vw;
+    margin-top: 15vw;
+    p {
+      width: 50vw;
+      font-size: 4vw;
+
+      span {
+        transform: translateY(70vw); //for animation
+      }
+    }
+  }
+  .circle {
+    position: absolute;
+    right: 10.11vw;
+    bottom: 10vw;
+  }
+  
+.blur{
+  z-index: -1;
+  overflow: hidden;
+  width: 100vw;
+  height: 14vh;
+  position: absolute;
+  bottom: 0;
+
+  background: url("../../../../public/blur.png") no-repeat center/cover ;
+}
+}
+
