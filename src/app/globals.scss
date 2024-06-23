@@ -1,15 +1,28 @@
 @import "helpers";
+@import "./lenis-scroll.scss";
+
 // @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: var(--font--inter)
   
 } 
 body{
   background-color: $black;
 }
 h1{
-  font-family: var(--font-JetBrains)
+
+}
+
+html{
+  -webkit-font-smoothing: antialised;
+  font-smoothing: antialised;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }

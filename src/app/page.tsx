@@ -1,14 +1,16 @@
-import EnterPage from "@/app/Animations/EnterPage";
+import PreLoader from "@/app/Animations/PreLoader";
 import Nav from "@/app/layouts/Nav";
-import Hero from "./layouts/Hero";
+import Hero from "@/app/layouts/Hero";
+import About from "@/app/layouts/About";
 
 export default function Home() {
   return (
     <>
-      <EnterPage />
+      <PreLoader />
       <main>
         <Nav />
         <Hero/>
+        <About/>
       </main>
     </>
   );

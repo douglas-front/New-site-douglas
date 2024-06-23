@@ -1,12 +1,9 @@
 import gsap from "gsap";
 import SplitType from "split-type";
+import styles from "./styles.module.scss"
 
-export default function rendering() {
-  welcome();
-  container();
-}
 
-function welcome() {
+export default function welcome() {
   new SplitType(".welcome", {
     types: "chars",
     charClass: "welcomeChar",
@@ -43,9 +40,3 @@ function welcome() {
   });
 }
 
-function container() {
-  gsap.to(".styles_enter__aKZGu", {
-    height: 0,
-    delay: 2,
-  });
-}

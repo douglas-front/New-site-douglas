@@ -1,0 +1,39 @@
+@import "helpers";
+
+.about{
+    position: relative;
+    padding-top: 9.73vw;
+    padding-inline: $padding;
+    width: 100vw;
+    height: 100vh;
+    // background-color: red;
+}
+.title{
+    mix-blend-mode: difference;
+    font-size: 8.38vw;
+    color: $white;
+    text-transform: uppercase;
+    margin-left: 9.79vw;
+
+    span{
+        display: block;
+        transform: translateY(100%);
+    }
+}
+.paragraphs{
+    overflow: hidden;
+    // background-color: blue;
+    position: absolute;
+    bottom: 2.86vw;
+    color: $white;
+
+    display: flex;
+    justify-content: center;
+    gap: 4.4vw;
+    width: 90vw;
+
+    p{
+        font-size: 1.10vw;
+        transform: translateY(200%);
+    }
+}

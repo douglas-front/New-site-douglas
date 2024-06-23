@@ -1,0 +1,15 @@
+@import "helpers";
+.arrow{
+  color: $white;
+  font-size: 3vw;
+  position: fixed;
+  right: 5.11vw;
+  bottom: 2vw;
+}
+
+@media screen and (max-width: 900px) {
+  .arrow{
+    font-size: 7vw;
+
+  }
+}

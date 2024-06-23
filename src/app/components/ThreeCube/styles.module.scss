@@ -1,11 +1,11 @@
 .three{
     position: fixed;
     top: 25vw; // for animation
-    left: 0;
+    left: 0%;
     width: 100vw;
     height: 40vw;
 
-    opacity: 0; // for animation
+    opacity: 0
 }
 
 @media screen and (max-width: 830px) {

@@ -1,12 +1,12 @@
 "use client";
 import ThreeCube from "@/app/components/ThreeCube";
-import styles from "./styles.module.scss";
-import Circle from "@/app/components/Circle";
-import { useEffect } from "react";
+import styles from "./Hero.module.scss";
+import Circle from "@/app/components/Arrow";
+import useIsomorphicEffect from "@/app/common/hooks/useIsomorphicEffect";
 import { rendering } from "./animations/heroTextAnimations";
 
 export default function Hero() {
-  useEffect(() => {
+  useIsomorphicEffect(() => {
     rendering();
   }, []);
 

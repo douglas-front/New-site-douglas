@@ -1,4 +1,3 @@
-import { useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from 'three';
@@ -9,8 +8,6 @@ interface ICube {
 }
 
 export default function Cube({ color, position }: ICube) {
-  
-  const colorTexture = useTexture("bg.webp");
   
   const ref = useRef<THREE.Mesh>(null);
 

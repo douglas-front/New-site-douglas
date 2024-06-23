@@ -30,6 +30,7 @@
   }
 }
 .paragraph {
+  mix-blend-mode: difference;
   z-index: 99;
   margin-right: 32vw;
   margin-top: 4vw;
@@ -46,6 +47,8 @@
   }
 }
 .color {
+  mix-blend-mode: difference;
+
   z-index: 99;
   margin-right: 33vw;
   margin-top: 1vw;
@@ -55,18 +58,14 @@
   p {
     overflow: hidden;
     color: $white;
-
+    font-size: 1vw;
     span {
       display: block;
       transform: translateY(50vw); //for animation
     }
   }
 }
-.circle {
-  position: absolute;
-  right: 5.11vw;
-  bottom: 2vw;
-}
+
 
 // .blur{
 //   z-index: -1;

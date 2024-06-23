@@ -1,8 +1,8 @@
 import gsap from "gsap";
-
+import styles from "@/app/components/Arrow/styles.module.scss"
 export function rendering(){
     animationTitle()
-    animationCircle()
+    animationArrow()
     animationParagraph()
 }
 
@@ -28,12 +28,12 @@ function animationTitle(){
         duration: 1
     })
 }
-function animationCircle(){
-    gsap.set(".styles_circle__eXbn7",{
+function animationArrow(){
+    gsap.set(`.${styles.arrow}`,{
         scale: 0
     })
 
-    gsap.to(".styles_circle__eXbn7",{
+    gsap.to(`.${styles.arrow}`,{
         scale: 1,
         delay: 4,
         ease: "elastic.out(1,9)",
@@ -42,9 +42,9 @@ function animationCircle(){
 
     //this "arrow" are in components/circle 
 
-    gsap.to(".arrow",{
+    gsap.to(`.${styles.arrow}`,{
         rotate: 360,
-        delay: 4.7,
+        delay: 4.3,
         duration: 1
     })
 }
