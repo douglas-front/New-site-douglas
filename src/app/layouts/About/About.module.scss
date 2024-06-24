@@ -9,6 +9,7 @@
     // background-color: red;
 }
 .title{
+    overflow: hidden;
     mix-blend-mode: difference;
     font-size: 8.38vw;
     color: $white;
