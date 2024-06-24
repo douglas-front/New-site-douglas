@@ -16,6 +16,7 @@ export default function LenisScrollProvider({ children }: Props) {
     const lenis = new Lenis({
       autoResize: true,
       easing: (t) => Math.pow(t, 5),
+      
     });
 
     function raf(time: number) {

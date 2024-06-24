@@ -59,6 +59,11 @@ export function closeNav(setIsOpen: any) {
     ease: "elastic.out(1,8)",
     duration: 0.7,
     delay: 0.2,
+
+    
+    onComplete: () => {
+      setIsOpen(false);
+    },
   });
 
   //animation overlay
@@ -67,8 +72,5 @@ export function closeNav(setIsOpen: any) {
     ease: "power3.inOut",
     delay: 0.5,
 
-    onComplete: () => {
-      setIsOpen(false);
-    },
   });
 }

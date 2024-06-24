@@ -67,37 +67,32 @@
 }
 
 
-// .blur{
-//   z-index: -1;
-//   overflow: hidden;
-//   width: 70vw;
-//   height: 12vw;
-//   border-radius: 50vw 50vw 0 0;
-//   position: absolute;
-//   bottom: 0;
 
-//   background: url("../../../../public/blur.png") ;
-// }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .title {
-    margin-top: 54.5vw;
-
+    margin-top: 44.5vw;
+    
     h1 {
       width: 90vw;
       font-size: 13.97vw;
-      margin-left: 0vw;
-
+      margin-left: 10vw;
+      
       span {
         transform: translateY(50vw); // for animation
       }
     }
   }
   .color {
-    margin-right: 38vw;
+    margin-right: 48vw;
     margin-top: 5vw;
     gap: 10vw;
     mix-blend-mode: difference;
+
+    p{
+    font-size: 3vw;
+
+    }
   }
 
   .paragraph {
@@ -117,16 +112,6 @@
     right: 10.11vw;
     bottom: 10vw;
   }
-  
-.blur{
-  z-index: -1;
-  overflow: hidden;
-  width: 100vw;
-  height: 14vh;
-  position: absolute;
-  bottom: 0;
 
-  background: url("../../../../public/blur.png") no-repeat center/cover ;
-}
 }
 

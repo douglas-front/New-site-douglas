@@ -37,3 +37,35 @@
         transform: translateY(200%);
     }
 }
+
+@media screen and (max-width: 450px) {
+    .about{
+        padding-top: 20vw;
+    }
+    .title{
+        font-size: 25vw;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 19vw;
+    }
+
+    .paragraphs{
+        overflow: hidden;
+        // background-color: blue;
+        position: absolute;
+        bottom: 4vw;
+        color: $white;
+    
+        display: flex;
+        flex-direction: column;
+
+        gap: 4.4vw;
+        width: 90vw;
+    
+        p{
+            margin-left: 5.11vw;
+            font-size: 3.20vw;
+            transform: translateY(200%);
+        }
+    }
+}

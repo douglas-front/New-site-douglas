@@ -4,31 +4,36 @@ import useIsomorphicEffect from "@/app/common/hooks/useIsomorphicEffect";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import {
+  animation_Title,
+  animation_Paragraph,
+  animation_Title_Out,
+  animation_Paragraph_Out,
+} from "@/app/layouts/About/animations/TextsAnimation";
+
 export default function About() {
-  gsap.registerPlugin(ScrollTrigger);
-
   useIsomorphicEffect(() => {
-    gsap.to(".span_inside_title", {
-      y: 0,
-      duration: 1.5,
-      ease: "elastic.out(1,9)",
-      scrollTrigger: {
-        trigger: `${styles.about}`,
-        start: "70% 50%",
-        end: "100% 50%",
-        
-      },
-    });
+    gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".paragraph", {
-      y: 0,
-      duration: 2,
-      ease: "elastic.out(1,8)",
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: `${styles.about}`,
-        start: "70% 50%",
-        end: "100% 50%",
+    ScrollTrigger.create({
+      trigger: `${styles.about}`,
+      start: "70% 50%",
+      end: "100% 50%",
+      onEnter: () => {
+        animation_Title();
+        animation_Paragraph();
+      },
+      onLeave: () => {
+        animation_Title_Out();
+        animation_Paragraph_Out();
+      },
+      onLeaveBack: () => {
+        animation_Title_Out();
+        animation_Paragraph_Out();
+      },
+      onEnterBack: () => {
+        animation_Title();
+        animation_Paragraph();
       },
     });
 
@@ -37,10 +42,10 @@ export default function About() {
       gsap.killTweensOf(".paragraph");
       gsap.killTweensOf(".span_inside_title");
     };
-  });
+  }, []);
 
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <h1 className={styles.title}>
         <span className="span_inside_title">About</span>
       </h1>
