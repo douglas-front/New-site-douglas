@@ -44,7 +44,6 @@ export default function NewHero() {
                 trigger: `.${styles.newHero}`,
                 start: "0% 50%",
                 end: "100% 50%",
-                markers: true,
                 scrub: true
             }
         })
