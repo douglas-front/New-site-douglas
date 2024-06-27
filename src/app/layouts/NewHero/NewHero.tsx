@@ -36,7 +36,7 @@ export default function NewHero() {
         })
         gsap.to(`.${styles.image} img`,{
             height: window.matchMedia("(max-width: 450px)").matches? "250vw" : "85vw",
-            width: window.matchMedia("(max-width: 450px)").matches? "100vw" : "",
+            width: window.matchMedia("(max-width: 450px)").matches? "100vw" : "100%",
             ease: "elastic.out(1,8)",
             duration: 3,
 
