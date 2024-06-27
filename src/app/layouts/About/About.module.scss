@@ -15,8 +15,9 @@
     color: $white;
     text-transform: uppercase;
     margin-left: 9.79vw;
-
     span{
+    mix-blend-mode: difference;
+
         display: block;
         transform: translateY(100%);
     }
@@ -25,7 +26,7 @@
     overflow: hidden;
     // background-color: blue;
     position: absolute;
-    bottom: 2.86vw;
+    bottom: 0;
     color: $white;
 
     display: flex;
@@ -34,14 +35,35 @@
     width: 90vw;
 
     p{
+        overflow: hidden;
         font-size: 1.10vw;
-        transform: translateY(200%);
+
+         span{
+             display: block;
+             transform: translateY(100%);
+         }
+
     }
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0vw;
+    height: 0%;
+
+    background-color: $new_white;
+
+    z-index: 999;
 }
 
 @media screen and (max-width: 450px) {
     .about{
-        padding-top: 20vw;
+        padding-top: 0vw;
     }
     .title{
         font-size: 25vw;
@@ -66,7 +88,6 @@
         p{
             margin-left: 5.11vw;
             font-size: 3.20vw;
-            transform: translateY(200%);
         }
     }
 }

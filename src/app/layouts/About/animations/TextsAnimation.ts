@@ -16,18 +16,18 @@ export const animation_Title_Out = () => {
 };
 
 export const animation_Paragraph = () => {
-  gsap.to(".paragraph", {
+  gsap.to(".paragraph span", {
     y: 0,
-    duration: 2,
+    duration: 1,
     ease: "elastic.out(1,8)",
     stagger: 0.2,
   });
 };
 export const animation_Paragraph_Out = () => {
-  gsap.to(".paragraph", {
-    y: "100%",
-    duration: 2,
-    ease: "elastic.out(1,8)",
+  gsap.to(".paragraph span", {
+    y: "200%",
+    duration: 0.1,
+    ease: "elastic.out(1,1)",
     stagger: 0.2,
   });
 };

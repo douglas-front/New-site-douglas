@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.scss";
 import Providers from "@/app/common/contexts/Providers";
-import { inter } from "./fonts"
+import { inter, playfair } from "./fonts"
 
 export const metadata: Metadata = {
   title: "Douglas",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.variable}>
+      <body className={`${inter.variable} ${playfair.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

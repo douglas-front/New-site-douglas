@@ -1,0 +1,88 @@
+@import "helpers";
+
+.newHero{
+    overflow: initial;
+    position: relative;
+    background-color: $new_white;
+
+    width: 100vw;
+    height: 150vh;
+
+    h1{
+        font-family: var(--font-playfair);
+        font-size: 12.3vw;
+        white-space: nowrap;
+        margin-top: 4.80vw;
+        color: $green;
+        font-weight: 900;
+
+        span{
+            display: block;
+            transform: translateY(100%);
+        }
+    }
+
+    p{
+        overflow: hidden;
+        color: $green;
+        font-size: 1.09vw;
+        position: absolute;
+        font-weight: 400;
+
+        span{
+            display: block;
+            transform: translateY(100%);
+        }
+    }
+    p:first-of-type{
+        bottom: 30vw;
+        left: 5.11vw;
+    }
+    p{
+        right: 5.11vw;
+        bottom: 45.5vw;
+    }
+}
+.image{
+    position: absolute;
+    top: 2vw;
+    left: 52%;
+    transform: translate(-50%, -0%);
+
+    img{
+        object-fit: contain;
+        width: 100%;
+        height: 5vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .newHero{
+    
+        height: 150vh;
+    
+        h1{
+            font-size: 25.3vw;
+            white-space: wrap;
+            margin-top: 4.80vw;
+            
+        }
+    
+        p{
+            font-size: 3.09vw;
+            height: 20vw;
+            span{
+                display: block;
+                transform: translateY(200%);
+            }
+        }
+        p:first-of-type{
+            top: 110vw;
+            left: 5.11vw;
+        }
+        p{
+            right: 5.11vw;
+            top: 85.5vw;
+        }
+    }
+}
